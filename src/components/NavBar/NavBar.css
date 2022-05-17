@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+}
+.menu{
+    listStyleType:none;
+    margin:0;
+    padding: 8px;;
+    background-color:blue;
+    display: inline;
+    width: 1500px;
+    float: left;
+    position: relative;
+}
+h1{
+    left:-500px;
+}
+.div{
+    display:inline;
+    
+}

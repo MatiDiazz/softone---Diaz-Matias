@@ -1,20 +1,21 @@
-import './NavBar.css';
-import CartWidget from '../CartWidget/CartWidget' 
+import logo from './logo.svg';
+import './App.css';
+import CountFunction from './components/Count/CountFunction';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import CartWidget from './components/CartWidget/CartWidget';
 
-const NavBar =() =>{
-    return(
-        <nav className="menu">
-           <h1>Logo</h1>
-            <h1>SoftOne</h1>
-            <div>
-                <button>Computadoras</button>
-                <button>Celulares</button>
-                <button>Gamers</button>
-                <button>Wearables </button>
-                <button>Sign in</button>
-            </div>
-            <CartWidget />
-        </nav>
-    )
+
+function App() {
+  return (
+    <div className="App">
+        <NavBar/>
+        <CartWidget/>
+        <ItemListContainer greeting="Gracias por su compra"/>
+        <CountFunction/>
+        <img src={logo} className="App-logo" alt="logo" />
+    </div>
+  );
 }
-export default NavBar
+
+export default App;

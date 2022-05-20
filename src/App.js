@@ -1,27 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
+import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget' 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-    <NavBar/>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const NavBar =() =>{
+    return(
+        <nav className="menu">
+           <h1>Logo</h1>
+            <h1>SoftOne</h1>
+            <div>
+                <button>Computadoras</button>
+                <button>Celulares</button>
+                <button>Gamers</button>
+                <button>Wearables </button>
+                <button>Sign in</button>
+            </div>
+            <CartWidget />
+        </nav>
+    )
 }
-
-export default App;
+export default NavBar

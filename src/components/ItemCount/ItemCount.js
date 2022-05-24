@@ -1,40 +1,32 @@
-import { useState } from "react"
+import { useState } from 'react';
 
-const ItemFunction = () => {
+/*products: [
+{ id:1, name:"", price:}
+]*/
+
+const ItemCount = () => {
 
     const [count, setCount] = useState(0)
-
-    console.log(useEffect)
-
-    useEffect(()=>{
-        console.log("eject")
-
-    return ()=>{
-        console.log("eject2")
-    }
-    },[])
-
+    
     const decrement = () => {
-for (let i = 0; i < 5 ; i ++) {
-    console.log("vuelta $(i+1)")
-    setCount((count) => count - 1)
-}
+            setCount( count -1)
     }
-
-const increment = () => {
- if (count + 5){
+    const increment = () => {
         setCount(count + 1)
     }
-    }
-console.log("eject3")
     
-    return (
-        <div style={{display:"flex"}}>
-            <button onClick={decrement}label="-"/>
+  return (
+        <div lassName="Count" style={{display:'flex'}}>
+            <button onClick={decrement}> - </button>
             <h1>{count}</h1>
-            <button onClick={increment}children="+"/>
+            <button onClick={increment}> + </button>
+
+        <h1 className="onAdd"> Add </h1>
+
         </div>
     )
 }
+
+<ItemCount stock="5" initial="1"/>
 
 export default CountFunction

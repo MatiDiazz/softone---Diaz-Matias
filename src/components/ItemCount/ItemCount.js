@@ -29,4 +29,4 @@ const ItemCount = () => {
 
 <ItemCount stock="5" initial="1"/>
 
-export default CountFunction
+export default ItemCount

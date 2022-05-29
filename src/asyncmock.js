@@ -4,12 +4,12 @@ const products = [
         name:'Huawei Nova 7',
         price: 000,
         category:'celulares',
-        img:'.\src\Images\Celular Huawei Nova 7.jfif',
+        img:'..\Images\Celular Huawei Nova 7.jfif',
         stock: 15,
         description:'descrpición de celular',
     },
 
-    { id:'2', name:'Huawei P40 Lite', price: 24, category:'celulares', img:'', stock: 10, description:'description'},
+   /* { id:'2', name:'Huawei P40 Lite', price: 24, category:'celulares', img:'', stock: 10, description:'description'},
     { id:'3', name:'Iphone 12',price:24, category:'celulares', img:'', stock: 10, description:'description'},
     { id:'4', name:'Iphone 13',price:24, category:'celulares', img:'', stock: 10, description:'description'},
     { id:'5', name:'Motorola Edge 20',price:24, category:'celulares', img:'', stock: 10, description:'description'},
@@ -35,12 +35,12 @@ const products = [
     { id:'13', name:'Xiaomi Auriculaes',price:24, category:'Wearables', img:'', stock: 10, description:'description'},
     { id:'13', name:'Xiomi band 6',price:24, category:'Wearables', img:'', stock: 10, description:'description'},
     { id:'13', name:'Xiaomi Mi Band',price:24, category:'Wearables', img:'', stock: 10, description:'Description'},
-]
+]*/
 
 export const getProducts = () => {
-    return new Promise (() => {
+    return new Promise ((resolve) => {
         setTimeout (()=>{
-            resolve(products)
+            resolve(Products)
         },2000)
     })
 }

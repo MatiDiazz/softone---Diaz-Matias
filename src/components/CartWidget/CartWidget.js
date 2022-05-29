@@ -3,7 +3,7 @@ return(
 
     <div>
        
-       <img src="./logo.svg" alt="cart-widget"/>
+       <img src="../images/carrito.png" alt="cart-widget"/>
        0
 
     </div>

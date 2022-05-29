@@ -44,3 +44,11 @@ export const getProducts = () => {
         },2000)
     })
 }
+
+export const getProduct = () => {
+    return new Promise (() => {
+        setTimeout (()=>{
+            resolve(Products)
+        },2000)
+    })
+}

@@ -15,4 +15,8 @@ const Item = ({id,name,subtitle,price}) => {
     )
 }
 
+function ItemCount({stock, initial, onAdd}) {
+
+    return 
+}
 export default Item

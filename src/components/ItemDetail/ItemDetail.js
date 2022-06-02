@@ -1,11 +1,18 @@
-import Item from '../Item/Item'
+import ItemCount from "../ItemCount/ItemCount";
 
-const ItemList = ({products}) => {
+const ItemDetail = ({props}) => {
+    
+    const onAdd = (cant) => {
+        console.log('you add $(cant) products to cart')
+    }
+    
     return(
         <div>
+        <h2>Description</h2>
+       
             {products.map(prod => <Item key={prod.id} {...prod}/>)}
         </div>
     )
 }
 
-export default ItemList
+export default ItemDetail

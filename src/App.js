@@ -7,13 +7,16 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import CartWidget from './components/CartWidget/CartWidget';
 
 
-function App() {
+const App = () => {
   /*const [show, setShow] = useState (true) */
-  const [page, setPage] = useState('list')
+  const [page, setPage] = useState({path:'list, param:'1'})
   
   return (
     <div className="App">
-    {/*<button onClick = {() => setShow(!show)}> En Stock</button> */}
+    <button onClick = {() => setPage({...page, path:'list'})}>Lista</button>
+{page.path ==='list'&& <ItemListContainer greeting="Bienvenido" handLePage={setPage}/>}
+{page.path=== 'detail' && <ItemDetailContainer id={page.param}/>}
+
         <NavBar/>
         <CartWidget/>
         <ItemListContainer greeting="SoftOne"/>

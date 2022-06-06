@@ -9,12 +9,14 @@ import CartWidget from './components/CartWidget/CartWidget';
 
 function App() {
   /*const [show, setShow] = useState (true) */
+  const [page, setPage] = useState('list')
+  
   return (
     <div className="App">
     {/*<button onClick = {() => setShow(!show)}> En Stock</button> */}
         <NavBar/>
         <CartWidget/>
-        <ItemListContainer greeting="Gracias por su compra"/>
+        <ItemListContainer greeting="SoftOne"/>
         <ItemCount/>
         <ItemCount stock={10}/>
         <ItemDetailContainer/>

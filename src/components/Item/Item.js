@@ -5,7 +5,7 @@ const Item = ({id,name,subtitle,price, handlePage}) => {
             <div className="cardText">
                 <p>{subtitle}</p>
                 <H1>{name}</H1>
-                <button onClick={()=> handlePage({path: 'detail'})}> Ver detalle </button>
+                <button onClick={()=> handlePage({path: 'detail', param: id})}> Ver detalle </button>
             </div>
             <p>{price}</p>
          

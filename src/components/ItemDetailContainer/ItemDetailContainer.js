@@ -1,10 +1,20 @@
-import { useEffect } from "react"
+import { useState, useEffect } from 'react'
+import { getProductById } from '../../asycmock'
+import ItemDetail from '../ItemDetail/ItemDetail'
+import { useParams } from 'react-router-dom'
 
-function ItemDetailContainer () {
+Const ItemDetailContainer = (id) => {
+    const [Product,setProduct] = useState()
 
     useEffect(() => {
-        getProduct().then(response => {
-            setProduct(response)
+        getProductById('1').then(response => {
+            console.log(response)
         })
     },[])
+    
+    return(
+    <div className='ItemDetailContainer'>
+        <ItemDetail title={product?.name}/>
+    </div>
+    )
 }

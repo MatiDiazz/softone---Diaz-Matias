@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import {getProducts} from '../../asyncmock'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-route-dom'
+import { getProductsByCategory } from '../../asyncmock'
 
 const ItemListContainer = ({ gretting, handLePage }) => {
 

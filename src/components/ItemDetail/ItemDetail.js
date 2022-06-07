@@ -1,7 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount";
 import {useState} from react
 
-const ButtonCount = ({onConfirm, stock, initial = 0}) => {
+const ButtonCount = ({onConfirm, stock, initial = 1}) => {
     const [count, setCount] = useState(initial)
     const increment = () {
         if(count < stock) {
@@ -18,10 +18,15 @@ const ButtonCount = ({onConfirm, stock, initial = 0}) => {
         <button onClick={increment}>-</button>
         <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
 
-const ItemDetail = ({id, name, img, category, descrpition, price, stock}) => {
+const ItemDetail = ({id, name, img, category, descrpition, price, stock }) => {
+    const [inputType, setInputType] = useState('input')
+    const [quantity, setQuantity] = useState(0)
     
-    const handleOnAdd = () => {
+    const ItemCount = inputType === 'input' ? InputCount : ButtonCount
+    const handleOnAdd = (count) => {
     console.log ( 'agregue al carrito')
+   console.log(count)
+    setQuantity(count)
     }
     
     return (
@@ -46,7 +51,7 @@ const ItemDetail = ({id, name, img, category, descrpition, price, stock}) => {
                     </p>
          </section>
 <footer className='ItemFooter'>
-    <buttonCount stock={stock} onConfirm={ButtonCount}/>
+    {quantity >0 ? <link to='/cart'>Finalizar compra</link> : <ItemCount stock={stock} onConfirm={handleOnAdd}/>}
 </footer>
 </article>
 )

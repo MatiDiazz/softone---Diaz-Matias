@@ -49,13 +49,13 @@ export const getProductById = (id) => {
     return new Promise (resolve => {
         setTimeout (()=>{
             resolve(Products.finde(prod=> prod.id === id))
-        },500)
+        },2000)
     })
 }
 export const getProductByCategory = (categoryId) => {
     return new Promise(resolve => {
         setTime(() =>{
             resolve(Products.filter(prod => prod.category === categoryId ))
-                    ),500)
+                    ),2000)
         })
     }

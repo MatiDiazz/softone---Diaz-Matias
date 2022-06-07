@@ -21,7 +21,7 @@ const ItemListContainer = ({ gretting, handLePage }) => {
                 setProducts(response)
         })
      }
-    },[])
+    },[categoryId])
 
     return (
         <div className ='ItemListContainer'>

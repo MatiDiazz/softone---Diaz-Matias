@@ -1,6 +1,58 @@
 import ItemCount from "../ItemCount/ItemCount";
+import {useState} from react
 
-const ItemDetail = ({name}) => {
+const ButtonCount = ({onConfirm, stock, initial = 0}) => {
+    const [count, setCount] = useState(initial)
+    const increment = () {
+        if(count < stock) {
+        setCount(count+1)
+        }
+    }
+    const decrement = () => {
+        setCount(count-1)
+    }
+    return (
+        <div>
+        <p>{count}</p>
+        <button onClick={decrement}>-</button>
+        <button onClick={increment}>-</button>
+        <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
+
+const ItemDetail = ({id, name, img, category, descrpition, price, stock}) => {
+    
+    const handleOnAdd = () => {
+    console.log ( 'agregue al carrito')
+    }
+    
+    return (
+        <article className="CardItem">
+        <header className="Header">
+            <h2 className="ItemHeader">
+                    {name}
+            </h2>
+        </header>
+        <picture>
+                >img src={img} alt {name} className="ItemImg"/>
+        </picture>
+        <section>
+                    <p className="Info">
+                        Categoria: {category}
+                    </p>
+                    <p className="Info">
+                         Description: {description}
+                    </p>
+                    <p className="Info">
+                        price: {price}
+                    </p>
+         </section>
+<footer className='ItemFooter'>
+    <buttonCount stock={stock} onConfirm={ButtonCount}/>
+</footer>
+</article>
+)
+}
+
+    
     
     const onAdd = (cant) => {
         console.log('you add $(cant) products to cart')

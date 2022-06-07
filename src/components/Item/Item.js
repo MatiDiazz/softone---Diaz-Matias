@@ -18,8 +18,4 @@ const Item = ({id,name,subtitle,price, handlePage}) => {
     )
 }
 
-function ItemCount({stock, initial, onAdd}) {
-
-    return 
-}
 export default Item
